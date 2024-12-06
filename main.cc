@@ -8,11 +8,11 @@ int main() {
     
     std::cout<<"Which puzzle will you be solving today?" << endl;
     
-    std::ifstream inf{"./data/puzzles.txt"};
+    std::ifstream file{"./data/puzzles.txt"};
     
     std::string strInput{};
     
-    while (inf >> strInput) {
+    while (std::getline(file, strInput)) {
         std::cout << strInput << "\n";
     }
     
